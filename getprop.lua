@@ -33,5 +33,5 @@ for i,v in a do
 end
 print("Done!\nTook ".. math.round((tick()-start)*100)/100 .."s")
 newdata["MeshPart"].MeshId = "Content" -- shit api
-newdata["MeshPart"].TextureId = "Content"
+newdata["MeshPart"].TextureID = "Content"
 return newdata
