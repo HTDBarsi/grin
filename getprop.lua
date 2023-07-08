@@ -19,7 +19,7 @@ end
 local ignore = {["TemporaryLegacyPhysicsSolverOverride"] = true}
 for i,v in a do
     if v["type"] == "Property" then
-        if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") and not ignore[v["Name"]] then  
+        if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") and ignore[v["Name"]] == nil then  
             newdata[v["Class"]][v["Name"]] = v["ValueType"]
         end
     end
