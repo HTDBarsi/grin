@@ -16,14 +16,14 @@ for i,v in a do
         newdata[v["Name"]] = {}
     end
 end
+local ignore = {["TemporaryLegacyPhysicsSolverOverride"] = true}
 for i,v in a do
     if v["type"] == "Property" then
-        if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") then  
+        if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") and not ignore[v["Name"]] then  
             newdata[v["Class"]][v["Name"]] = v["ValueType"]
         end
     end
 end
-
 for i,v in a do
     if v["Superclass"] then 
         for u,k in pairs(newdata[v["Superclass"]]) do
