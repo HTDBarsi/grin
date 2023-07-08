@@ -17,8 +17,10 @@ for i,v in a do
     end
 end
 for i,v in a do
-    if v["type"] == "Property" then 
-        newdata[v["Class"]][v["Name"]] = v["ValueType"]
+    if v["type"] == "Property" then
+        if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") then  
+            newdata[v["Class"]][v["Name"]] = v["ValueType"]
+        end
     end
 end
 
