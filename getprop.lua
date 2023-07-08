@@ -33,4 +33,9 @@ for i,v in a do
 end
 print("Done!\nTook ".. math.round((tick()-start)*100)/100 .."s")
 newdata["MeshPart"].MeshId = "Content" -- shit api
+newdata["WrapTarget"] = {
+    CageMeshId = "Content",
+    ImportOrigin = "Unknown",
+    Stiffness = "int64",
+}
 return newdata
