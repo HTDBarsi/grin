@@ -16,7 +16,7 @@ for i,v in a do
         newdata[v["Name"]] = {}
     end
 end
-local ignore = {["TemporaryLegacyPhysicsSolverOverride"] = true}
+local ignore = {["TemporaryLegacyPhysicsSolverOverride"] = true, ["Parent"] = true}
 for i,v in a do
     if v["type"] == "Property" and ignore[v["Name"]] == nil then
         if #v["tags"] == 0 or (#v["tags"] == 1 and v["tags"][1] == "readonly") then  
