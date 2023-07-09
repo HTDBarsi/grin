@@ -31,7 +31,7 @@ for i,v in a do
         end
     end
 end
-print("Done!\nTook ".. math.round((tick()-start)*100)/100 .."s")
+print("Loaded!\nTook ".. math.round((tick()-start)*100)/100 .."s")
 newdata["MeshPart"].MeshId = "Content" -- shit api
 newdata["WrapTarget"] = {
     CageMeshId = "Content",
