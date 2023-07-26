@@ -43,7 +43,7 @@
 - Chest farm
 - Chat logger
 
-Visuals:
---ESP
---Nametags
---Boxes
+## Visuals:
+- ESP
+- Nametags
+- Boxes
