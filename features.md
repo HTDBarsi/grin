@@ -1,4 +1,4 @@
-#Type soul:
+# Type soul:
 --Mobfarm :
 -Select position (ability to farm under and above the mob aswell as underground)
 -Custom tween speed
